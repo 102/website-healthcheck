@@ -1,5 +1,5 @@
 name: "Website Simple Healthcheck"
-description: "Website status checking and text scanning"
+description: "Website status checking"
 branding:
   icon: activity
   color: white
