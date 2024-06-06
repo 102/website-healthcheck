@@ -1,23 +1,23 @@
-# Website Healthcheck Action
+# Website Simple Healthcheck Action
 
-This actions checks your website if it's returning status code 200 and checks for specified text on the given page.
+This actions checks your website if it's returning status code 200.
 
 An example of website-healthcheck in a GitHub Action:
 
 ```yaml
-name: "Check for website health and title text"
+name: "Check for website health"
 
-on: [push]
+on:
+  schedule:
+    - cron: "*/12 * * * *"
 
 jobs:
-  health_check_job:
+  healthcheck:
     runs-on: ubuntu-latest
-    name: Check for status 200 and title text "lokerse.dev"
+
     steps:
-      - uses: actions/checkout@v2
-      - id: test
-        uses: johnlokerse/website-healthcheck@v2
+      - name: Ping uuid
+        uses: 102/website-healthcheck@v1.0.0
         with:
-          web-url: "https://www.lokerse.dev"
-          scan-for-text: "lokerse.dev"
+          web-url: https://uuid-364w.onrender.com/
 ```
