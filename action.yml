@@ -10,7 +10,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo Scanning ${{ inputs.web-url }} for string ${{ inputs.scan-for-text }}
+    - run: echo Pinging ${{ inputs.web-url }}
       shell: bash
     - run: chmod +x ${{ github.action_path }}/scan-website.sh
       shell: bash
