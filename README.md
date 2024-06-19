@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Ping uuid
-        uses: 102/website-healthcheck@v1.0.0
+        uses: 102/website-healthcheck@v1.0.2
         with:
           web-url: https://uuid-364w.onrender.com/
 ```

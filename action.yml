@@ -12,7 +12,7 @@ runs:
   steps:
     - run: echo Pinging ${{ inputs.web-url }}
       shell: bash
-    - run: chmod +x ${{ github.action_path }}/scan-website.sh
+    - run: chmod +x ${{ github.action_path }}/healthcheck.sh
       shell: bash
-    - run: ${{ github.action_path }}/scan-website.sh ${{ inputs.web-url }}
+    - run: ${{ github.action_path }}/healthcheck.sh ${{ inputs.web-url }}
       shell: bash
